@@ -78,33 +78,55 @@ void S1_Designation::on_pushButton_ok_clicked()
     }
 
 }
-
+//------------------------------------------------------------------------------------------------------------------------
+//below are extra functions not for use but compiler made them
+void S1_Designation::on_pushButtonuser_login_table_addbutton_17_clicked() {}
 void S1_Designation::on_comboBox_designation_activated(const QString &arg1){}
 void S1_Designation::on_pushButton_3_clicked(){}
-
+//------------------------------------------------------------------------------------------------------------------------
 //below are pushbuttons under afterlogin screens(i.e.,chosing tables by different users)
-void S1_Designation::on_admin_login_eventbutton_clicked() {ui->stackedWidget->setCurrentIndex(7);}
-void S1_Designation::on_admin_login_userbutton_clicked() {ui->stackedWidget->setCurrentIndex(7);}
-void S1_Designation::on_admin_login_staffbutton_clicked() {ui->stackedWidget->setCurrentIndex(7);}
-void S1_Designation::on_admin_login_inventorybutton_clicked() {ui->stackedWidget->setCurrentIndex(7);}
-void S1_Designation::on_admin_login_venuebutton_clicked() {ui->stackedWidget->setCurrentIndex(7);}
-void S1_Designation::on_admin_login_clientbutton_clicked() {ui->stackedWidget->setCurrentIndex(7);}
-void S1_Designation::on_staff_login_eventbutton_clicked() {ui->stackedWidget->setCurrentIndex(7);}
-void S1_Designation::on_staff_login_staffbutton_clicked() {ui->stackedWidget->setCurrentIndex(7);}
-void S1_Designation::on_Inventory_login_eventbutton_clicked() {ui->stackedWidget->setCurrentIndex(7);}
-void S1_Designation::on_Inventory_login_inventorybutton_clicked() {ui->stackedWidget->setCurrentIndex(7);}
-void S1_Designation::on_R_login_eventbutton_clicked() {ui->stackedWidget->setCurrentIndex(7);}
-void S1_Designation::on_R_login_clientbutton_clicked() {ui->stackedWidget->setCurrentIndex(7);}
-void S1_Designation::on_EM_login_eventbutton_clicked() {ui->stackedWidget->setCurrentIndex(19);}//only EM is having no option page,so directly linked to view page
-void S1_Designation::on_EM_login_staffbutton_clicked() {ui->stackedWidget->setCurrentIndex(19);}
-void S1_Designation::on_EM_login_inventorybutton_clicked() {ui->stackedWidget->setCurrentIndex(19);}
-void S1_Designation::on_EM_login_venuebutton_clicked() {ui->stackedWidget->setCurrentIndex(19);}
+char ch;
+void S1_Designation::on_admin_login_eventbutton_clicked() {ch='E'; ui->stackedWidget->setCurrentIndex(7);}
+void S1_Designation::on_admin_login_userbutton_clicked() {ch='U'; ui->stackedWidget->setCurrentIndex(7);}
+void S1_Designation::on_admin_login_staffbutton_clicked() {ch='S'; ui->stackedWidget->setCurrentIndex(7);}
+void S1_Designation::on_admin_login_inventorybutton_clicked() {ch='I'; ui->stackedWidget->setCurrentIndex(7);}
+void S1_Designation::on_admin_login_venuebutton_clicked() {ch='V'; ui->stackedWidget->setCurrentIndex(7);}
+void S1_Designation::on_admin_login_clientbutton_clicked() {ch='C'; ui->stackedWidget->setCurrentIndex(7);}
 
+void S1_Designation::on_staff_login_eventbutton_clicked() {ch='E'; ui->stackedWidget->setCurrentIndex(7);}
+void S1_Designation::on_staff_login_staffbutton_clicked() {ch='S'; ui->stackedWidget->setCurrentIndex(7);}
+
+void S1_Designation::on_Inventory_login_eventbutton_clicked() {ch='E'; ui->stackedWidget->setCurrentIndex(7);}
+void S1_Designation::on_Inventory_login_inventorybutton_clicked() {ch='I'; ui->stackedWidget->setCurrentIndex(7);}
+
+void S1_Designation::on_R_login_eventbutton_clicked() {ch='E'; ui->stackedWidget->setCurrentIndex(7);}
+void S1_Designation::on_R_login_clientbutton_clicked() {ch='C'; ui->stackedWidget->setCurrentIndex(7);}
+
+void S1_Designation::on_EM_login_eventbutton_clicked() {ch='E'; ui->stackedWidget->setCurrentIndex(19);}//only EM is having no option page,so directly linked to view page
+void S1_Designation::on_EM_login_staffbutton_clicked() {ch='S'; ui->stackedWidget->setCurrentIndex(19);}
+void S1_Designation::on_EM_login_inventorybutton_clicked() {ch='I'; ui->stackedWidget->setCurrentIndex(19);}
+void S1_Designation::on_EM_login_venuebutton_clicked() {ch='V'; ui->stackedWidget->setCurrentIndex(19);}
+//--------------------------------------------------------------------------------------------------------------------------
 //below are pushbuttons under option screen
 void S1_Designation::on_user_login_table_viewbutton_clicked() {ui->stackedWidget->setCurrentIndex(18);}
 void S1_Designation::on_user_login_table_deletebutton_clicked() {ui->stackedWidget->setCurrentIndex(16);}
 void S1_Designation::on_user_login_table_printbutton_clicked() {ui->stackedWidget->setCurrentIndex(15);}
 void S1_Designation::on_user_login_table_updatebutton_clicked() {ui->stackedWidget->setCurrentIndex(17);}
-void S1_Designation::on_user_login_table_addbutton_clicked() {ui->stackedWidget->setCurrentIndex(9);}//9-13 ESICV
 
-void S1_Designation::on_pushButtonuser_login_table_addbutton_17_clicked() {}
+void S1_Designation::on_user_login_table_addbutton_clicked() {
+    if(ch=='E')
+    ui->stackedWidget->setCurrentIndex(9);
+    else if(ch=='I')
+    ui->stackedWidget->setCurrentIndex(11);
+    else if(ch=='S')
+    ui->stackedWidget->setCurrentIndex(10);
+    else if(ch=='V')
+    ui->stackedWidget->setCurrentIndex(13);
+    else if(ch=='C')
+    ui->stackedWidget->setCurrentIndex(12);
+    else
+        QMessageBox::warning(this,"ERROR", "No table is choosed before in afterlogin(tables) screen, which cann't be happen");
+}
+//--------------------------------------------------------------------------------------------------------------------------
+
+void S1_Designation::on_EM_login_table_printbutton_clicked() {ui->stackedWidget->setCurrentIndex(15);}
