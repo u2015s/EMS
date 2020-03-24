@@ -2,6 +2,11 @@
 #define S1_DESIGNATION_H
 
 #include <QMainWindow>
+#include<QCoreApplication>
+#include<QtSql/QtSql>
+#include<QtSql/QSqlDatabase>
+#include<QtSql/QSqlQuery>
+#include<QMessageBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class S1_Designation; }
@@ -71,6 +76,50 @@ private slots:
     void on_user_login_table_addbutton_clicked();
 
     void on_EM_login_table_printbutton_clicked();
+
+    void on_loginpage_backbutton_clicked();
+
+    void on_admin_login_backbutton_clicked();
+
+    void on_staff_login_backbutton_clicked();
+
+    void on_Inventory_login_backbutton_clicked();
+
+    void on_R_login_backbutton_clicked();
+
+    void on_EM_login_backbutton_clicked();
+
+    void on_user_login_table_backbutton_clicked();
+
+    void on_event_addform_backbutton_clicked();
+
+    void on_staff_addform_backbutton_clicked();
+
+    void on_inventory_addform_backbutton_clicked();
+
+    void on_client_addform_backbutton_clicked();
+
+    void on_venue_addform_backbutton_clicked();
+
+    void on_createuser_backbutton_13_clicked();
+
+    void on_print_backbutton_clicked();
+
+    void on_delete_backbutton_clicked();
+
+    void on_update_backbutton_clicked();
+
+    void on_view_backbutton_clicked();
+
+    void on_EM_viewpage_backbutton_clicked();
+
+    void on_signout_button_clicked();
+
+    void on_changepass_button_clicked();
+
+    void on_changepass_okbutton_clicked();
+
+    void on_user_addform_backbutton_clicked();
 
 private:
     Ui::S1_Designation *ui;

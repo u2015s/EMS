@@ -2,6 +2,7 @@
 #include "ui_s1_designation.h"
 #include <QMessageBox>
 
+
 S1_Designation::S1_Designation(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::S1_Designation)
@@ -15,29 +16,29 @@ S1_Designation::~S1_Designation()
     delete ui;
 }
 
-
+char ch1;
 void S1_Designation::on_pushButton_7_clicked()
 {
     QString username = ui->comboBox_input_username->currentText();
         QString password = ui->comboBox_input_password->currentText();
 
-        if(username ==  "admin" && password == "admin") {
+        if(username ==  "admin" && password == "admin") {ch1='A';
             QMessageBox::information(this,"Login Status", "you are logged in successfully");
          ui->stackedWidget->setCurrentIndex(2);
         }
-        else if(username ==  "receptionist" && password == "receptionist") {
+        else if(username ==  "receptionist" && password == "receptionist") {ch1='R';
             QMessageBox::information(this,"Login Status", "you are logged in successfully");
          ui->stackedWidget->setCurrentIndex(5);
         }
-        else if(username ==  "staff" && password == "staff") {
+        else if(username ==  "staff" && password == "staff") {ch1='S';
             QMessageBox::information(this,"Login Status", "you are logged in successfully");
          ui->stackedWidget->setCurrentIndex(3);
         }
-        else if(username ==  "eventmanager" && password == "eventmanager") {
+        else if(username ==  "eventmanager" && password == "eventmanager") {ch1='E';
             QMessageBox::information(this,"Login Status", "you are logged in successfully");
          ui->stackedWidget->setCurrentIndex(6);
         }
-        else if(username ==  "inventory" && password == "inventory") {
+        else if(username ==  "inventory" && password == "inventory") {ch1='I';
             QMessageBox::information(this,"Login Status", "you are logged in successfully");
          ui->stackedWidget->setCurrentIndex(4);
         }
@@ -78,12 +79,19 @@ void S1_Designation::on_pushButton_ok_clicked()
     }
 
 }
-//------------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------------------
 //below are extra functions not for use but compiler made them
 void S1_Designation::on_pushButtonuser_login_table_addbutton_17_clicked() {}
 void S1_Designation::on_comboBox_designation_activated(const QString &arg1){}
 void S1_Designation::on_pushButton_3_clicked(){}
-//------------------------------------------------------------------------------------------------------------------------
+void S1_Designation::on_admin_login_backbutton_clicked() {}
+void S1_Designation::on_staff_login_backbutton_clicked() {}
+void S1_Designation::on_Inventory_login_backbutton_clicked() {}
+void S1_Designation::on_R_login_backbutton_clicked() {}
+void S1_Designation::on_EM_login_backbutton_clicked() {}
+void S1_Designation::on_createuser_backbutton_13_clicked() {}
+
+//--------------------------------------------------------------------------------------------------------------------------
 //below are pushbuttons under afterlogin screens(i.e.,chosing tables by different users)
 char ch;
 void S1_Designation::on_admin_login_eventbutton_clicked() {ch='E'; ui->stackedWidget->setCurrentIndex(7);}
@@ -114,19 +122,55 @@ void S1_Designation::on_user_login_table_printbutton_clicked() {ui->stackedWidge
 void S1_Designation::on_user_login_table_updatebutton_clicked() {ui->stackedWidget->setCurrentIndex(17);}
 
 void S1_Designation::on_user_login_table_addbutton_clicked() {
-    if(ch=='E')
-    ui->stackedWidget->setCurrentIndex(9);
-    else if(ch=='I')
-    ui->stackedWidget->setCurrentIndex(11);
-    else if(ch=='S')
-    ui->stackedWidget->setCurrentIndex(10);
-    else if(ch=='V')
-    ui->stackedWidget->setCurrentIndex(13);
-    else if(ch=='C')
-    ui->stackedWidget->setCurrentIndex(12);
+         if(ch=='E') ui->stackedWidget->setCurrentIndex(9);
+    else if(ch=='I') ui->stackedWidget->setCurrentIndex(11);
+    else if(ch=='S') ui->stackedWidget->setCurrentIndex(10);
+    else if(ch=='V') ui->stackedWidget->setCurrentIndex(13);
+    else if(ch=='C') ui->stackedWidget->setCurrentIndex(12);
+    else if(ch=='U') {ui->stackedWidget->setCurrentIndex(14);}
     else
         QMessageBox::warning(this,"ERROR", "No table is choosed before in afterlogin(tables) screen, which cann't be happen");
 }
 //--------------------------------------------------------------------------------------------------------------------------
-
+//print button on EM-view page
 void S1_Designation::on_EM_login_table_printbutton_clicked() {ui->stackedWidget->setCurrentIndex(15);}
+//--------------------------------------------------------------------------------------------------------------------------
+//all page's back buttons below
+void S1_Designation::on_loginpage_backbutton_clicked() {
+            ui->comboBox_input_username->clear();
+            ui->comboBox_input_password->clear();
+            ui->stackedWidget->setCurrentIndex(0); }
+void S1_Designation::on_user_login_table_backbutton_clicked() {
+         if(ch1=='A') {
+             ui->stackedWidget->setCurrentIndex(2);}
+    else if(ch1=='R') ui->stackedWidget->setCurrentIndex(5);
+    else if(ch1=='S') ui->stackedWidget->setCurrentIndex(3);
+    else if(ch1=='E') ui->stackedWidget->setCurrentIndex(6);
+    else if(ch1=='I') ui->stackedWidget->setCurrentIndex(4);
+    else
+        QMessageBox::warning(this,"ERROR", "No table is choosed before in afterlogin(tables) screen, which cann't be happen");
+}
+void S1_Designation::on_event_addform_backbutton_clicked() {ui->stackedWidget->setCurrentIndex(7);}
+void S1_Designation::on_staff_addform_backbutton_clicked() {ui->stackedWidget->setCurrentIndex(7);}
+void S1_Designation::on_inventory_addform_backbutton_clicked() {ui->stackedWidget->setCurrentIndex(7);}
+void S1_Designation::on_client_addform_backbutton_clicked() {ui->stackedWidget->setCurrentIndex(7);}
+void S1_Designation::on_venue_addform_backbutton_clicked() {ui->stackedWidget->setCurrentIndex(7);}
+void S1_Designation::on_user_addform_backbutton_clicked() {ui->stackedWidget->setCurrentIndex(7);}
+
+void S1_Designation::on_print_backbutton_clicked() {ui->stackedWidget->setCurrentIndex(7);}
+void S1_Designation::on_delete_backbutton_clicked() {ui->stackedWidget->setCurrentIndex(7);}
+void S1_Designation::on_update_backbutton_clicked() {ui->stackedWidget->setCurrentIndex(7);}
+void S1_Designation::on_view_backbutton_clicked() {ui->stackedWidget->setCurrentIndex(7);}
+void S1_Designation::on_EM_viewpage_backbutton_clicked() {ui->stackedWidget->setCurrentIndex(6);}
+//----------------------------------------------------------------------------------------------------------------------------
+//common buttons
+void S1_Designation::on_signout_button_clicked() { ui->comboBox_input_username->clear();
+                                                   ui->comboBox_input_password->clear();
+                                                   ui->stackedWidget->setCurrentIndex(0); }
+void S1_Designation::on_changepass_button_clicked() { ui->stackedWidget->setCurrentIndex(8);}
+void S1_Designation::on_changepass_okbutton_clicked() {ui->stackedWidget->setCurrentIndex(0);}
+//----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
