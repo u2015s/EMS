@@ -1,5 +1,4 @@
 #include "s1_designation.h"
-
 #include <QApplication>
 #include<iostream>
 using namespace std;

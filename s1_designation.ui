@@ -362,19 +362,6 @@
         <string>client table</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="admin_login_backbutton">
-       <property name="geometry">
-        <rect>
-         <x>50</x>
-         <y>310</y>
-         <width>93</width>
-         <height>28</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>BACK</string>
-       </property>
-      </widget>
      </widget>
      <widget class="QLabel" name="label_6">
       <property name="geometry">
@@ -452,19 +439,6 @@
         <string>staff table</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="staff_login_backbutton">
-       <property name="geometry">
-        <rect>
-         <x>50</x>
-         <y>310</y>
-         <width>93</width>
-         <height>28</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>BACK</string>
-       </property>
-      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="afterloginforINVENTORY">
@@ -524,19 +498,6 @@
         <string>inventory table</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="Inventory_login_backbutton">
-       <property name="geometry">
-        <rect>
-         <x>50</x>
-         <y>310</y>
-         <width>93</width>
-         <height>28</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>BACK</string>
-       </property>
-      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="afterloginforRECEPTIONIST">
@@ -594,19 +555,6 @@
        </property>
        <property name="text">
         <string>client table</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="R_login_backbutton">
-       <property name="geometry">
-        <rect>
-         <x>50</x>
-         <y>300</y>
-         <width>93</width>
-         <height>28</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>BACK</string>
        </property>
       </widget>
      </widget>
@@ -692,19 +640,6 @@
        </property>
        <property name="text">
         <string>venue table</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="EM_login_backbutton">
-       <property name="geometry">
-        <rect>
-         <x>50</x>
-         <y>340</y>
-         <width>93</width>
-         <height>28</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>BACK</string>
        </property>
       </widget>
      </widget>
@@ -819,6 +754,104 @@
        <string>  this is options page
 (not for event manager) </string>
       </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="optionsforUserTable">
+     <widget class="QLabel" name="label_23">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>60</y>
+        <width>491</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string> this is options page for User Table selected by ADMIN </string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_15">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>130</y>
+        <width>441</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QPushButton" name="admin_login_table_viewbutton">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>30</y>
+         <width>161</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>VIEW USER TABLE</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="admin_login_table_removeuserbutton">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>100</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>REMOVE USER</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="admin_login_table_changeUserPassbutton">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>160</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>CHANGE USER PASSWORD </string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="admin_login_table_createuserbutton">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>30</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>CREATE USER</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="admin_login_table_backbutton">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>290</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>BACK</string>
+       </property>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="changepassword">
@@ -1235,13 +1268,13 @@
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="UPDATE">
+    <widget class="QWidget" name="UPDATEpageforEvent">
      <widget class="QLabel" name="label_20">
       <property name="geometry">
        <rect>
-        <x>380</x>
-        <y>220</y>
-        <width>481</width>
+        <x>390</x>
+        <y>150</y>
+        <width>321</width>
         <height>31</height>
        </rect>
       </property>
@@ -1251,14 +1284,14 @@
        </font>
       </property>
       <property name="text">
-       <string>this is UPDATE page</string>
+       <string>this is UPDATE page for Event table</string>
       </property>
      </widget>
      <widget class="QGroupBox" name="groupBox_18">
       <property name="geometry">
        <rect>
-        <x>270</x>
-        <y>260</y>
+        <x>350</x>
+        <y>190</y>
         <width>401</width>
         <height>351</height>
        </rect>
@@ -1267,6 +1300,236 @@
        <string/>
       </property>
       <widget class="QPushButton" name="update_backbutton">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>290</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>BACK</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="UPDATEpageforStaff">
+     <widget class="QGroupBox" name="groupBox_21">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>140</y>
+        <width>401</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QPushButton" name="updateStaff_backbutton">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>290</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>BACK</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_24">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>100</y>
+        <width>321</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>this is UPDATE page for Staff table</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="UPDATEpageforInventory">
+     <widget class="QLabel" name="label_25">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>110</y>
+        <width>371</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>this is UPDATE page for Inventory table</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_22">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>160</y>
+        <width>401</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QPushButton" name="updateInventory_backbutton">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>290</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>BACK</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="UPDATEpageforVenue">
+     <widget class="QGroupBox" name="groupBox_26">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>160</y>
+        <width>401</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QPushButton" name="updateVenue_backbutton">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>290</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>BACK</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_29">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>120</y>
+        <width>321</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>this is UPDATE page for Venue table</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="UPDATEpageforClient">
+     <widget class="QLabel" name="label_27">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>110</y>
+        <width>321</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>this is UPDATE page for Client table</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_24">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>150</y>
+        <width>401</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QPushButton" name="updateClient_backbutton">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>290</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>BACK</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="ChangeUserPassowrd">
+     <widget class="QLabel" name="label_28">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>110</y>
+        <width>441</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>this is change User Password page for User table</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_25">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>150</y>
+        <width>401</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QPushButton" name="changeUserPass_backbutton">
        <property name="geometry">
         <rect>
          <x>30</x>
@@ -1397,6 +1660,7 @@
      </widget>
     </widget>
     <widget class="QWidget" name="page20"/>
+    <widget class="QWidget" name="UPDATEpageforReceptionist"/>
    </widget>
    <widget class="QPushButton" name="signout_button">
     <property name="geometry">
@@ -1424,6 +1688,9 @@
      <string>CHANGE PASSWORD</string>
     </property>
    </widget>
+   <zorder>signout_button</zorder>
+   <zorder>changepass_button</zorder>
+   <zorder>stackedWidget</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

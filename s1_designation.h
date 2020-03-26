@@ -23,13 +23,7 @@ public:
 private slots:
     void on_pushButton_7_clicked();
 
-    void on_pushButton_clicked();
-
     void on_pushButton_ok_clicked();
-
-    void on_comboBox_designation_activated(const QString &arg1);
-
-    void on_pushButton_3_clicked();
 
     void on_admin_login_eventbutton_clicked();
 
@@ -65,8 +59,6 @@ private slots:
 
     void on_user_login_table_viewbutton_clicked();
 
-    void on_pushButtonuser_login_table_addbutton_17_clicked();
-
     void on_user_login_table_deletebutton_clicked();
 
     void on_user_login_table_printbutton_clicked();
@@ -79,16 +71,6 @@ private slots:
 
     void on_loginpage_backbutton_clicked();
 
-    void on_admin_login_backbutton_clicked();
-
-    void on_staff_login_backbutton_clicked();
-
-    void on_Inventory_login_backbutton_clicked();
-
-    void on_R_login_backbutton_clicked();
-
-    void on_EM_login_backbutton_clicked();
-
     void on_user_login_table_backbutton_clicked();
 
     void on_event_addform_backbutton_clicked();
@@ -100,8 +82,6 @@ private slots:
     void on_client_addform_backbutton_clicked();
 
     void on_venue_addform_backbutton_clicked();
-
-    void on_createuser_backbutton_13_clicked();
 
     void on_print_backbutton_clicked();
 
@@ -120,6 +100,26 @@ private slots:
     void on_changepass_okbutton_clicked();
 
     void on_user_addform_backbutton_clicked();
+
+    void on_updateStaff_backbutton_clicked();
+
+    void on_updateInventory_backbutton_clicked();
+
+    void on_updateClient_backbutton_clicked();
+
+    void on_changeUserPass_backbutton_clicked();
+
+    void on_admin_login_table_viewbutton_clicked();
+
+    void on_admin_login_table_createuserbutton_clicked();
+
+    void on_admin_login_table_removeuserbutton_clicked();
+
+    void on_admin_login_table_changeUserPassbutton_clicked();
+
+    void on_admin_login_table_backbutton_clicked();
+
+    void on_updateVenue_backbutton_clicked();
 
 private:
     Ui::S1_Designation *ui;
