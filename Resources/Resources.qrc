@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/" lang="English">
+        <file>back-button.png</file>
+        <file>concert.png</file>
+        <file>inventory.png</file>
+        <file>man.png</file>
+        <file>staff.png</file>
+        <file>user.png</file>
+        <file>venue.png</file>
+    </qresource>
+</RCC>
