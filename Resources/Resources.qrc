@@ -7,5 +7,15 @@
         <file>staff.png</file>
         <file>user.png</file>
         <file>venue.png</file>
+        <file>Aqua.qss</file>
+        <file>ElegantDark.qss</file>
+        <file>delete.png</file>
+        <file>print.png</file>
+        <file>update.png</file>
+        <file>view.png</file>
+        <file>add.png</file>
+        <file>changepassword.png</file>
+        <file>deleteuser.png</file>
+        <file>adduser.png</file>
     </qresource>
 </RCC>
