@@ -39,7 +39,7 @@
      <string notr="true">background-color:rgb(128,128,128,0.1);</string>
     </property>
     <property name="currentIndex">
-     <number>25</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="designation">
      <widget class="QGroupBox" name="groupBox">
