@@ -39,7 +39,7 @@
      <string notr="true">background-color:rgb(128,128,128,0.1);</string>
     </property>
     <property name="currentIndex">
-     <number>16</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="designation">
      <widget class="QGroupBox" name="groupBox">
@@ -350,13 +350,13 @@ background-color:rgb(128,128,128,0.02)
         <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="editable">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
        <property name="currentText">
-        <string>Enter User Id</string>
+        <string comment="Enter User Id" extracomment="Enter User Id"/>
        </property>
       </widget>
-      <widget class="QComboBox" name="comboBox_input_password">
+      <widget class="QLineEdit" name="lineEdit_input_password">
        <property name="geometry">
         <rect>
          <x>420</x>
@@ -366,12 +366,13 @@ background-color:rgb(128,128,128,0.02)
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
+        <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+background-color:white;</string>
        </property>
-       <property name="editable">
-        <bool>true</bool>
+       <property name="text">
+        <string/>
        </property>
-       <property name="currentText">
+       <property name="placeholderText">
         <string>Enter Password</string>
        </property>
       </widget>
@@ -3417,49 +3418,69 @@ border-image: url(:/back-button.png);</string>
      </widget>
     </widget>
     <widget class="QWidget" name="VIEW">
-     <widget class="QLabel" name="label_18">
+     <widget class="QPushButton" name="view_backbutton">
       <property name="geometry">
        <rect>
-        <x>390</x>
-        <y>210</y>
-        <width>481</width>
-        <height>31</height>
+        <x>10</x>
+        <y>30</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>BACK</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="ViewTable">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>170</y>
+        <width>1331</width>
+        <height>741</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>790</x>
+        <y>90</y>
+        <width>55</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_78">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>30</y>
+        <width>521</width>
+        <height>121</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <family>JasmineUPC</family>
+        <pointsize>69</pointsize>
+        <weight>75</weight>
+        <italic>true</italic>
+        <bold>true</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(128, 128, 128, 0.001);</string>
+      </property>
       <property name="text">
-       <string>this is VIEW page</string>
+       <string>View Table</string>
       </property>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_19">
-      <property name="geometry">
-       <rect>
-        <x>290</x>
-        <y>250</y>
-        <width>401</width>
-        <height>351</height>
-       </rect>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
-      <property name="title">
-       <string/>
-      </property>
-      <widget class="QPushButton" name="view_backbutton">
-       <property name="geometry">
-        <rect>
-         <x>30</x>
-         <y>290</y>
-         <width>93</width>
-         <height>28</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>BACK</string>
-       </property>
-      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="VIEW_for_EM">

@@ -1,0 +1,5 @@
+lineEdit_input_password
+
+comboBox_input_password
+
+lambda :self.stackedWidget.setCurrentIndex(24)
